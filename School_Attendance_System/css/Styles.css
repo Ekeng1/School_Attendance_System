@@ -1,0 +1,285 @@
+﻿/* General Styles */
+html, body {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%; /* Ensure full width */
+    max-width: 100%; /* Prevent exceeding viewport width */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #007bff;
+    color: white;
+}
+
+.brand img {
+    height: 50px; /* Adjust as needed */
+   
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+    .nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+.icon {
+    display: none; /* Hide by default, show on mobile */
+}
+
+/* Hero Section Styles */
+.main .container-fluid {
+    background: url("/Images/twtc.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 5rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.lead {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+/* Cards Section Styles */
+.card {
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card i {
+        margin-bottom: 1rem;
+    }
+
+    .card h4 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+    footer p {
+        margin: 0;
+    }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav a:not(:last-child) {
+        display: none; /* Hide nav links on mobile */
+    }
+
+    .icon {
+        display: block; /* Show hamburger icon on mobile */
+    }
+
+    .header {
+        padding: 1rem;
+    }
+
+    .main .container-fluid {
+        padding: 3rem 1rem;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Login Container */
+.login-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 1.5rem;
+    margin: 1rem;
+}
+
+/* Form Header */
+.form-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+    .form-header .logo {
+        width: 80px;
+        height: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-header h2 {
+        font-size: 1.5rem;
+        color: #333;
+        margin: 0;
+    }
+
+/* Form Body */
+.form-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: bold;
+}
+
+.textbox {
+    padding: 0.15rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+    .textbox:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+/* Button */
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.25rem;
+    border-radius: 7px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .button:hover {
+        background-color: #0056b3;
+    }
+
+/* Error Message */
+.lblmsg {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #ff0000;
+}
+.privacy-notice {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+    .privacy-notice a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .privacy-notice a:hover {
+            text-decoration: underline;
+        }
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid;
+}
+
+.password-input {
+    width: 100%;
+    padding-right: 40px; /* Space for eye icon */
+    padding-left: 10px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.show-pass {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #555;
+}
+
+    .show-pass:hover {
+        color: black;
+    }

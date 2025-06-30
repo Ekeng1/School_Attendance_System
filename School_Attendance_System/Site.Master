@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="School_Attendance_System.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Admin Master</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <div id="preloader">
+            <div class="loader">
+                <div class="loader--dot"></div>
+                <div class="loader--dot"></div>
+                <div class="loader--dot"></div>
+                <div class="loader--dot"></div>
+                <div class="loader--dot"></div>
+                <div class="loader--dot"></div>
+                <div class="loader--text"></div>
+            </div>
+        </div>
+        <div class="side-menu">
+            <div class="brand-name" style="color: white;">
+                <h1>Brand</h1>
+            </div>
+            <ul>
+
+                <li>
+                    <i class="fa fa-dashboard" style="font-size: 24px;"></i><a href="AdminDashboard.aspx">&nbsp;<span>Dashboard</span> </a>
+
+                </li>
+
+                <li>
+                    <i class="fa fa-child" style="font-size: 24px;"></i><a href="ManageStudents.aspx">&nbsp;<span>Students</span> </a>
+
+                </li>
+
+                <li>
+                    <i class="fa fa-person" style="font-size: 24px;"></i><a href="ManageTeachers.aspx">&nbsp;<span>Teachers</span> </a>
+
+                </li>
+
+                <li>
+                    <i class="fa fa-chart-line" style="font-size: 24px;"></i><a href="GenerateReport.aspx">&nbsp;<span>GenerateReport</span></a>
+
+                </li>
+                <li>
+                    <i class="fa fa-file-alt" style="font-size: 24px;"></i><a href="ViewReport.aspx">&nbsp;<span>View Report</span></a>
+
+                </li>
+
+                <li>
+                    <i class="fa fa-upload" style="font-size: 24px;"></i><a href="Upload.aspx">&nbsp;<span>Upload</span></a>
+
+                </li>
+
+                <li>
+                    <i class="fa fa-download" style="font-size: 24px;"></i><a href="Downloads.aspx">&nbsp;<span>Downloads</span></a>
+
+                </li>
+            </ul>
+            <footer>
+                <p>made with <i class="fa fa-heart" style="color: red;"></i>by Paola Ekeng 2025</p>
+                <div>
+                    <a href="AddAdmin.aspx"><i class="fa fa-person" style="font-size: 24px; color: black;"></i></a>
+                </div>
+
+
+            </footer>
+        </div>
+
+        <div class="header">
+            <button class="menu-toggle">☰</button>
+            <div class="nav">
+                <asp:ScriptManager runat="server" />
+                <div class="search">
+                    <asp:TextBox ID="txtSearch" CssClass="FORM-GROUP" placeholder="Search by ID, Name, or Class" runat="server" AutoPostBack="true" OnTextChanged="txtSearch_TextChanged" />
+                    <asp:DropDownList ID="ddlClass" CssClass="search-dropdown" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlClass_SelectedIndexChanged">
+                        <asp:ListItem Text="Select Class" Value=""></asp:ListItem>
+                        <asp:ListItem Text="Class 1" Value="Class1"></asp:ListItem>
+                        <asp:ListItem Text="Class 2" Value="Class2"></asp:ListItem>
+                        <asp:ListItem Text="Class 3" Value="Class3"></asp:ListItem>
+                        <asp:ListItem Text="Class 4" Value="Class4"></asp:ListItem>
+                        <asp:ListItem Text="Class 5" Value="Class5"></asp:ListItem>
+                        <asp:ListItem Text="Class 6" Value="Class6"></asp:ListItem>
+                    </asp:DropDownList>
+
+                    <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" />
+                </div>
+
+
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+        <!-- Search Results GridView -->
+        <div class="containerX">
+            <asp:UpdatePanel ID="updResults" runat="server" UpdateMode="Conditional">
+    <ContentTemplate>
+        <asp:GridView ID="gvResults" runat="server" AutoGenerateColumns="False" CssClass="table">
+            <Columns>
+                <asp:BoundField DataField="ID" HeaderText="ID" />
+                <asp:BoundField DataField="Firstname" HeaderText="Name" />
+                <asp:BoundField DataField="Classid" HeaderText="Class" />
+                <asp:BoundField DataField="UserType" HeaderText="Role" />
+            </Columns>
+        </asp:GridView>
+    </ContentTemplate>
+</asp:UpdatePanel>
+
+        </div>
+
+        <div class="footer">
+            &copy; 2025 School Attendance System
+     
+        </div>
+    </form>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/js.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+</body>
+</html>

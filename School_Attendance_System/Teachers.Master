@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Teachers.master.cs" Inherits="School_Attendance_System.Teachers" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Teacher master</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    </head>
+<body>
+    <form id="form1" runat="server">
+                            <div id="preloader">
+    <div class="loader">
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--text"></div>
+    </div>
+</div>
+            
+         <div class="side-menu">
+     <div class="brand-name">
+         <h1>Brand</h1>
+     </div>
+     <ul>
+         <li>
+             <i class="fa fa-dashboard"></i><a href="TeacherDashboard.aspx">&nbsp;<span>Dashboard</span> </a></li>
+         
+         <li>
+             <i class="fa fa-check-square"></i><a href="MarkAttendance.aspx">&nbsp;<span>Mark Attendance</span></a> </li>
+         <li>
+           <i class="fa fa-download"></i> <a href="Downloads.aspx">&nbsp;<span>Downloads</span></a> </li>
+                         <li>
+                    <i class="fa fa-file-alt" style="font-size: 24px;"></i><a href="ViewReport.aspx">&nbsp;<span>View Report</span></a>
+
+                </li> 
+     </ul>
+             <footer>
+    <p>made with <i class="fa fa-heart" style="color: red;"></i> by Paola Ekeng 2025</p>
+</footer>
+ </div>
+     <div class="header">
+         <div class="nav">
+             <div class="search">
+                 <input type="text" placeholder="Search..">
+                 <button type="submit">
+                     <img src="search.png" alt=""></button>
+             </div>
+             <div class="user">
+                 <a href="#" class="btn">Add New</a>
+                 <img src="notifications.png" alt="">
+                 <div class="img-case">
+                     <img src="user.png" alt="">
+                 </div>
+             </div>
+         </div>
+     </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+<div class="footer">
+    &copy; 2025 School Attendance System
+     
+</div>
+    </form>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/js.js"></script>
+</body>
+</html>
